@@ -8,7 +8,26 @@ public class GameConfigs : MonoBehaviour
     public static GameConfigs instance;
     [SerializeField] int gameTime;
     [SerializeField] int numberOfCards;
-    [SerializeField] string[] cartas;
+    [SerializeField] int[] cartasValor;
+    [SerializeField] int[] cartasNaipe;
+
+
+    public void setCartasValor(int[] value)
+    {
+        this.cartasValor = value;
+    }
+    public void setCartasNaipe(int[] value)
+    {
+        this.cartasNaipe = value;
+    }
+    public int[] getCartasValor()
+    {
+        return this.cartasValor;
+    }
+    public int[] getCartasNaipe()
+    {
+        return this.cartasNaipe;
+    }
 
     void Awake()
     {
@@ -31,9 +50,4 @@ public class GameConfigs : MonoBehaviour
     {
         return this.numberOfCards;
     }
-    public void setCartas(string[] c)
-    {
-        this.cartas = c;
-    }
-
 }
