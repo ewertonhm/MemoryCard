@@ -189,7 +189,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 117123784}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832011051}
+        m_MethodName: setNumberOfCards
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &117123784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 295ff1ac41b4d1a49b2850024cf887f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 141d5929a4ef6aa409e08cb9516a7bfe, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -726,7 +737,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 512927312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832011051}
+        m_MethodName: setNumberOfCards
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &512927312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,7 +767,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5b6a2324649c8e4ea2f105dd0dd590e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c1a36eafd9aadd4e810df0e7ba73f85, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -922,7 +944,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 553704041}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832011051}
+        m_MethodName: setGameTime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 120
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &553704041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,7 +1458,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1086032598}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832011051}
+        m_MethodName: setGameTime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 60
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1086032598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,7 +1582,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1213554200}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832011051}
+        m_MethodName: setNumberOfCards
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1213554200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,7 +1612,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f9d85cc5ff18eee45939556747b05d8e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02ca0ef67fdf182429e7cce947c13647, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1777,7 +1832,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1490633829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832011051}
+        m_MethodName: setGameTime
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1490633829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2278,6 +2344,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811515016}
   m_CullTransparentMesh: 0
+--- !u!114 &1832011051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2889792873814180703, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7968136768094469457}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c582d2cf99ab74d8da2d51cf660aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2015435437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,3 +2422,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7968136768094469457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3818167322078246669, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_Name
+      value: Config
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.704582
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 182.12811
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.279771
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8124015708559637939, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889792873814180703, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: gameTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889792873814180703, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5,
+        type: 3}
+      propertyPath: numberOfCards
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5a97679bb1c8ebe4fb19b52c1a5163c5, type: 3}

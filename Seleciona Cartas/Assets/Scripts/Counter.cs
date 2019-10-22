@@ -10,7 +10,7 @@ public class Counter : MonoBehaviour
     [SerializeField] int playTime;
     [SerializeField] string nextView;
     [SerializeField] float timeLeft;
-
+    
     [SerializeField] GameObject counterDisplayText;
 
     private void timeOver()
@@ -30,6 +30,7 @@ public class Counter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playTime = GameConfigs.instance.getGameTime();
         timeLeft = (float)playTime;
         counterDisplayText.GetComponent<TextMeshProUGUI>().text = playTime.ToString();
     }
