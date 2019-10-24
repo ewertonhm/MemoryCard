@@ -26,6 +26,11 @@ public class Counter : MonoBehaviour
         return string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
     }
 
+    public void changeScene()
+    {
+        GameConfigs.instance.adicionarTempoRestante((int)this.timeLeft);
+        SceneManager.LoadScene(nextView);
+    }
 
     // Start is called before the first frame update
     void Start()

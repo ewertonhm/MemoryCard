@@ -26,10 +26,11 @@ public class Carta : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GetComponent<Image>().sprite = Sprites.numero[this.valor].naipe[this.naipe];     
+    }
+    public void updateSprite()
+    {
         GetComponent<Image>().sprite = Sprites.numero[this.valor].naipe[this.naipe];
-      
-        
     }
 
     // Update is called once per frame
