@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/cardSelectScreen.unity
-    guid: a2ca1d7d54eac06499fb57b4d16ba313
+    path: Assets/Scenes/mainScreen.unity
+    guid: e86515371dbaed0408cd35cbfe2c2706
   - enabled: 1
     path: Assets/Scenes/gameConfig.unity
     guid: 7628328049f6d474194c55317e3b6c34
   - enabled: 1
-    path: Assets/Scenes/mainScreen.unity
-    guid: e86515371dbaed0408cd35cbfe2c2706
-  - enabled: 1
     path: Assets/Scenes/memScreen.unity
     guid: bf416fc2e40e945419f1ff1a6204ee5a
+  - enabled: 1
+    path: Assets/Scenes/cardSelectScreen.unity
+    guid: a2ca1d7d54eac06499fb57b4d16ba313
+  - enabled: 1
+    path: Assets/Scenes/resultScreen.unity
+    guid: b8d0b7908eb627342aa2d547ec5be286
   m_configObjects: {}
