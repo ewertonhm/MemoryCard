@@ -13,7 +13,7 @@ public class EspalhaCartas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach(GameObject carta in prefabCartas)
+        foreach (GameObject carta in prefabCartas)
         {
             carta.SetActive(false);
         }
