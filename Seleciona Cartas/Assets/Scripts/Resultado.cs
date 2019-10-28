@@ -34,6 +34,11 @@ public class Resultado : MonoBehaviour
         }
     }
 
+    public void salvaRanking()
+    {
+
+    }
+
     void Start()
     {
         this.textFieldTempo.GetComponent<TextMeshProUGUI>().text = GameConfigs.instance.getTempoRestante().ToString();
