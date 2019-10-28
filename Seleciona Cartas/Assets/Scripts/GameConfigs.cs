@@ -12,6 +12,8 @@ public class GameConfigs : MonoBehaviour
     [SerializeField] int[] cartasSelecionadasValor;
     [SerializeField] int[] cartasSelecionadasNaipe;
     [SerializeField] int tempoRestante = 0;
+    [SerializeField] int cartaAtual;
+    [SerializeField] bool[] cartaSelecionada;
 
     void Awake()
     {
@@ -88,5 +90,37 @@ public class GameConfigs : MonoBehaviour
     public int[] getCartasSelecionadasNaipes()
     {
         return this.cartasSelecionadasNaipe;
+    }
+    public void setCartaAtual(int posicao)
+    {
+        this.cartaAtual = posicao;
+    }
+    public int getCartaAtual()
+    {
+        return this.cartaAtual;
+    }
+    public void setCartaSelecionadaValor(int posicao, int valor)
+    {
+        this.cartasSelecionadasValor[posicao] = valor;
+    }
+    public void setCartaSelecionadaNaipe(int posicao, int valor)
+    {
+        this.cartasSelecionadasNaipe[posicao] = valor;
+    }
+    public int getCartaSelecionadaValor(int posicao)
+    {
+        return this.cartasSelecionadasValor[posicao];
+    }
+    public int getCartaSelecionadaNaipe(int posicao)
+    {
+        return this.cartasSelecionadasNaipe[posicao];
+    }
+    public bool getCartaSelecionada(int posicao)
+    {
+        return this.cartaSelecionada[posicao];
+    }
+    public void setCartaSelecionada(int posicao, bool set)
+    {
+        this.cartaSelecionada[posicao] = set;
     }
 }
