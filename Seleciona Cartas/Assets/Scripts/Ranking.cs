@@ -6,8 +6,8 @@ public class Ranking : MonoBehaviour
 {
     [SerializeField] List<string> nome = new List<string>();
     [SerializeField] List<int> acertos = new List<int>();
-    [SerializeField] int[] numeroDeCartas;
-    [SerializeField] int[] tempo;
+    [SerializeField] List<int> numeroDeCartas = new List<int>();
+    [SerializeField] List<int> tempo = new List<int>();
 
 
     public string getNome(int posicao)
@@ -27,7 +27,7 @@ public class Ranking : MonoBehaviour
         return this.tempo[posicao];
     }
 
-    public void setNome(int posicao, string nome)
+    public void setNome(string nome)
     {
         this.nome.Add(nome);
     }
@@ -35,13 +35,20 @@ public class Ranking : MonoBehaviour
     {
         this.acertos.Add(acertos);
     }
-    public void setNumeroDeCartas(int posicao, int numeroDeCartas)
+    public void setNumeroDeCartas(int numeroDeCartas)
     {
-        this.numeroDeCartas[posicao] = numeroDeCartas;
+        this.numeroDeCartas.Add(numeroDeCartas);
     }
-    public void setTempo(int posicao, int tempo)
+    public void setTempo(int tempo)
     {
-        this.tempo[posicao] = tempo;
+        this.tempo.Add(tempo);
+    }
+    public void lerDados()
+    {
+        this.setAcertos(GameConfigs.instance.getAcertos());
+        this.setNumeroDeCartas(GameConfigs.instance.getNumberOfCards());
+        this.setNome("haru");
+        this.setTempo(GameConfigs.instance.getGameTime());
     }
 
 

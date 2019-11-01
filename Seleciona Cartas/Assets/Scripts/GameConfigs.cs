@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameConfigs : MonoBehaviour
 {
     public static GameConfigs instance;
+    [SerializeField] string nome;
+    [SerializeField] int acertos;
     [SerializeField] int gameTime;
     [SerializeField] int numberOfCards;
     [SerializeField] int[] cartasValor;
@@ -123,4 +125,22 @@ public class GameConfigs : MonoBehaviour
     {
         this.cartaSelecionada[posicao] = set;
     }
+    public void setAcertos(int acertos)
+    {
+        this.acertos = acertos;
+    }
+    public int getAcertos()
+    {
+        return this.acertos;
+    }
+    public void setNome(string nome)
+    {
+        this.name = nome;
+    }
+    public string getNome()
+    {
+        return this.nome;
+    }
 }
+
+

@@ -7,7 +7,7 @@ public class Resultado : MonoBehaviour
 {
     [SerializeField] GameObject textFieldTempo;
     [SerializeField] GameObject textFieldAcertos;
-    [SerializeField] private int Acertos;
+    [SerializeField] private int acertos;
     [SerializeField] private int numeroDeCartas;
     [SerializeField] private int[] cartasSorteadas;
     [SerializeField] private int[] naipesSorteados;
@@ -16,6 +16,8 @@ public class Resultado : MonoBehaviour
     
     public void calculaAcertos()
     {
+        Ranking ranking = new Ranking();
+
         this.numeroDeCartas = GameConfigs.instance.getNumberOfCards();
         this.cartasSorteadas = GameConfigs.instance.getCartasValor();
         this.naipesSorteados = GameConfigs.instance.getCartasNaipe();
@@ -33,7 +35,7 @@ public class Resultado : MonoBehaviour
                 if(this.naipesSorteados[c] == this.naipesSelecionados[c])
                 {
                     Debug.Log("Acerto");
-                    this.Acertos++;
+                    this.acertos++;
                 } else
                 {
                     Debug.Log("Naipes não são iguais!");
@@ -43,17 +45,20 @@ public class Resultado : MonoBehaviour
                 Debug.Log("Cartas não são iguais!");
             }
         }
+        GameConfigs.instance.setAcertos(this.acertos);
     }
 
     public void salvaRanking()
     {
-
+        GetComponent<Ranking>().lerDados();
+        GetComponent<IO>().SaveFile(GetComponent<Ranking>());
     }
 
     void Start()
     {
         this.textFieldTempo.GetComponent<TextMeshProUGUI>().text = GameConfigs.instance.getGameTime().ToString();
         this.calculaAcertos();
-        this.textFieldAcertos.GetComponent<TextMeshProUGUI>().text = this.Acertos.ToString();
+        this.textFieldAcertos.GetComponent<TextMeshProUGUI>().text = this.acertos.ToString();
+        this.salvaRanking();
     }
 }
