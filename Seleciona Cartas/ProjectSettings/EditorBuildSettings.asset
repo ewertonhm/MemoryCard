@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/resultScreen.unity
     guid: b8d0b7908eb627342aa2d547ec5be286
+  - enabled: 1
+    path: Assets/Scenes/HelpScreen.unity
+    guid: 4acec72c6ca064e42bad285c262827cc
+  - enabled: 1
+    path: Assets/Scenes/RankingScreen.unity
+    guid: 167df9941e853114ba7f1b1888fe6f06
   m_configObjects: {}
