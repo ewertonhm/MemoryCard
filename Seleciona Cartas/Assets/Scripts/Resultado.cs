@@ -9,6 +9,7 @@ public class Resultado : MonoBehaviour
     [SerializeField] GameObject textFieldAcertos;
     [SerializeField] private int acertos;
     [SerializeField] private int numeroDeCartas;
+    [SerializeField] private int pontos;
     [SerializeField] private int[] cartasSorteadas;
     [SerializeField] private int[] naipesSorteados;
     [SerializeField] private int[] cartasSelecionadas;
@@ -46,16 +47,35 @@ public class Resultado : MonoBehaviour
             }
         }
         GameConfigs.instance.setAcertos(this.acertos);
+        this.calcularPontos();
+    }
+
+    public void calcularPontos()
+    {
+        if(GameConfigs.instance.getGameTime() == 35)
+        {
+            this.pontos = this.acertos * 20;
+        } else if(GameConfigs.instance.getGameTime() == 60)
+        {
+            this.pontos = this.acertos * 10;
+        } else if(GameConfigs.instance.getGameTime() == 120)
+        {
+            this.pontos = this.acertos * 5;
+        }
+        GameConfigs.instance.setPontos(this.pontos);
+        
     }
 
     public void salvaRanking()
     {
         GetComponent<Ranking>().lerDados();
-        GetComponent<IO>().SaveFile(
-            GetComponent<Ranking>().getListNome(),
-            GetComponent<Ranking>().getListAcertos(),
-            GetComponent<Ranking>().getListNumerDeCartas(),
-            GetComponent<Ranking>().getListTempo());
+        GetComponent<Ranking>().guardarPlayerPrefsNome();
+        GetComponent<Ranking>().guardarPlayerPrefsAcertos();
+        GetComponent<Ranking>().guardarPlayerPrefsNumeroDeCartas();
+        GetComponent<Ranking>().guardarPlayerPrefsTempo();
+        GetComponent<Ranking>().guardarPlayerPrefsPontos();
+        PlayerPrefs.Save();
+        //PlayerPrefs.DeleteAll();
     }
 
     void Start()

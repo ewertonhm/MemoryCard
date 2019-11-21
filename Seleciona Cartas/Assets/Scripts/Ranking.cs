@@ -45,11 +45,22 @@ public class Ranking : MonoBehaviour
     {
         this.tempo.Add(tempo);
     }
+    public void setPontos(int pontos)
+    {
+        this.pontos.Add(pontos);
+    }
     public void lerDados()
     {
+        this.lerPlayerPrefsNome();
+        this.lerPlayerPrefsNumeroDeCartas();
+        this.lerPlayerPrefsAcertos();
+        this.lerPlayerPrefsPontos();
+        this.lerPlayerPrefsTempo();
+
         this.setAcertos(GameConfigs.instance.getAcertos());
         this.setNumeroDeCartas(GameConfigs.instance.getNumberOfCards());
-        this.setNome("haru");
+        this.setPontos(GameConfigs.instance.getPontos());
+        this.setNome(GameConfigs.instance.getNome());
         this.setTempo(GameConfigs.instance.getGameTime());
     }
     public List<string> getListNome()
@@ -88,44 +99,72 @@ public class Ranking : MonoBehaviour
     public void lerPlayerPrefsAcertos()
     {
         int c = 0;
-        while (PlayerPrefs.GetString("nome" + c.ToString(), "fim") != "fim")
+        while (PlayerPrefs.GetInt("acertos" + c.ToString(), 9999999) != 9999999)
         {
-            setNome(PlayerPrefs.GetString("nome" + c.ToString()));
+            setAcertos(PlayerPrefs.GetInt("acertos" + c.ToString()));
             c++;
+        }
+    }
+    public void guardarPlayerPrefsAcertos()
+    {
+        for (int i = 0; i < this.acertos.Count; i++)
+        {
+            PlayerPrefs.SetInt("acetos" + i, this.acertos[i]);
         }
     }
     public void lerPlayerPrefsNumeroDeCartas()
     {
         int c = 0;
-        while (PlayerPrefs.GetString("nome" + c.ToString(), "fim") != "fim")
+        while (PlayerPrefs.GetInt("NumeroDeCartas" + c.ToString(), 9999999) != 9999999)
         {
-            setNome(PlayerPrefs.GetString("nome" + c.ToString()));
+            setAcertos(PlayerPrefs.GetInt("NumeroDeCartas" + c.ToString()));
             c++;
+        }
+    }
+    public void guardarPlayerPrefsNumeroDeCartas()
+    {
+        for (int i = 0; i < this.numeroDeCartas.Count; i++)
+        {
+            PlayerPrefs.SetInt("numeroDeCartas" + i, this.numeroDeCartas[i]);
         }
     }
     public void lerPlayerPrefsTempo()
     {
         int c = 0;
-        while (PlayerPrefs.GetString("nome" + c.ToString(), "fim") != "fim")
+        while (PlayerPrefs.GetInt("tempo" + c.ToString(), 9999999) != 9999999)
         {
-            setNome(PlayerPrefs.GetString("nome" + c.ToString()));
+            setAcertos(PlayerPrefs.GetInt("tempo" + c.ToString()));
             c++;
+        }
+    }
+    public void guardarPlayerPrefsTempo()
+    {
+        for (int i = 0; i < this.tempo.Count; i++)
+        {
+            PlayerPrefs.SetInt("tempo" + i, this.tempo[i]);
         }
     }
     public void lerPlayerPrefsPontos()
     {
         int c = 0;
-        while (PlayerPrefs.GetString("nome" + c.ToString(), "fim") != "fim")
+        while (PlayerPrefs.GetInt("pontos" + c.ToString(), 9999999) != 9999999)
         {
-            setNome(PlayerPrefs.GetString("nome" + c.ToString()));
+            setAcertos(PlayerPrefs.GetInt("pontos" + c.ToString()));
             c++;
+        }
+    }
+    public void guardarPlayerPrefsPontos()
+    {
+        for (int i = 0; i < this.pontos.Count; i++)
+        {
+            PlayerPrefs.SetInt("pontos" + i, this.pontos[i]);
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        this.lerPlayerPrefsNome();
+        
     }
 
     // Update is called once per frame
