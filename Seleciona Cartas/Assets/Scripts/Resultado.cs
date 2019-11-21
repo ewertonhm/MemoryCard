@@ -51,7 +51,11 @@ public class Resultado : MonoBehaviour
     public void salvaRanking()
     {
         GetComponent<Ranking>().lerDados();
-        GetComponent<IO>().SaveFile(GetComponent<Ranking>());
+        GetComponent<IO>().SaveFile(
+            GetComponent<Ranking>().getListNome(),
+            GetComponent<Ranking>().getListAcertos(),
+            GetComponent<Ranking>().getListNumerDeCartas(),
+            GetComponent<Ranking>().getListTempo());
     }
 
     void Start()

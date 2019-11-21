@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Ranking : MonoBehaviour
 {
     [SerializeField] List<string> nome = new List<string>();
@@ -49,6 +50,22 @@ public class Ranking : MonoBehaviour
         this.setNumeroDeCartas(GameConfigs.instance.getNumberOfCards());
         this.setNome("haru");
         this.setTempo(GameConfigs.instance.getGameTime());
+    }
+    public List<string> getListNome()
+    {
+        return this.nome;
+    }
+    public List<int> getListAcertos()
+    {
+        return this.acertos;
+    }
+    public List<int> getListNumerDeCartas()
+    {
+        return this.numeroDeCartas;
+    }
+    public List<int> getListTempo()
+    {
+        return this.tempo;
     }
 
 
