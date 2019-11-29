@@ -16,6 +16,7 @@ public class GameConfigs : MonoBehaviour
     [SerializeField] int tempoRestante = 0;
     [SerializeField] int cartaAtual;
     [SerializeField] bool[] cartaSelecionada;
+    [SerializeField] int pontos;
 
     void Awake()
     {
@@ -33,6 +34,14 @@ public class GameConfigs : MonoBehaviour
         this.cartasSelecionadasNaipe = null;
     }
 
+    public int getPontos()
+    {
+        return this.pontos;
+    }
+    public void setPontos(int pontos)
+    {
+        this.pontos = pontos;
+    }
     public int getGameTime()
     {
         return this.gameTime;
@@ -135,7 +144,7 @@ public class GameConfigs : MonoBehaviour
     }
     public void setNome(string nome)
     {
-        this.name = nome;
+        this.nome = nome;
     }
     public string getNome()
     {
