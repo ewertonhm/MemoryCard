@@ -11,6 +11,43 @@ public class Ranking : MonoBehaviour
     [SerializeField] List<int> tempo = new List<int>();
     [SerializeField] List<int> pontos = new List<int>();
 
+    Dictionary<string, Dictionary<string, int>> playerScores;
+
+    public int getPlayerScore(string username, string scoreType)
+    {
+        Init();
+
+        if(playerScores.ContainsKey(username) == false)
+        {
+            // we have no score record at all for this username
+            return 0;
+        }
+        if(playerScores[username].ContainsKey(scoreType) == false)
+        {
+            return 0;
+        }
+
+        return playerScores[username][scoreType];
+    }
+
+    public void SetPlayerScore(string username, string scoreType, int value)
+    {
+        Init();
+
+        if (playerScores.ContainsKey(username) == false)
+        {
+            playerScores[username] = new Dictionary<string, int>();
+        }
+
+        playerScores[username][scoreType] = value;
+    }
+
+    public void ChangeScore(string username, string scoreType, int amount)
+    {
+        Init();
+        int currScore = getPlayerScore(username, scoreType);
+        SetPlayerScore(username, scoreType, currScore + amount);
+    }
 
     public string getNome(int posicao)
     {
@@ -126,6 +163,16 @@ public class Ranking : MonoBehaviour
     void Start()
     {
         this.lerPlayerPrefsNome();
+    }
+
+    void Init()
+    {
+        if(playerScores != null)
+        {
+            return;
+        }
+        playerScores = new Dictionary<string, Dictionary<string, int>>();
+
     }
 
     // Update is called once per frame
