@@ -590,7 +590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
+  m_Text: '200
 
 '
 --- !u!222 &90840777
@@ -669,9 +669,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 15
 --- !u!222 &91201709
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1037,7 +1035,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 35
+  m_Text: 120
 --- !u!222 &307034508
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1114,7 +1112,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 15
 --- !u!222 &329006274
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1191,7 +1189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
+  m_Text: '10
 
 '
 --- !u!222 &337913146
@@ -1416,7 +1414,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
+  m_Text: '75
 
 '
 --- !u!222 &378657612
@@ -1495,7 +1493,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 10
 --- !u!222 &419671829
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2184,7 +2182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 35
+  m_Text: 120
 --- !u!222 &829715054
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2261,7 +2259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 35
+  m_Text: 60
 --- !u!222 &846146211
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2571,9 +2569,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 100
 --- !u!222 &900467882
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2966,7 +2962,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 15
 --- !u!222 &1397932056
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3714,21 +3710,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8170481817251445295, guid: 4e6b056fe76b7da4885873d356f4240d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: changeScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8170481817251445295, guid: 4e6b056fe76b7da4885873d356f4240d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8170481817251445295, guid: 4e6b056fe76b7da4885873d356f4240d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: mainScreen
-      objectReference: {fileID: 0}
     - target: {fileID: 8170481817162757786, guid: 4e6b056fe76b7da4885873d356f4240d,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -3773,6 +3754,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: VOLTAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170481817251445295, guid: 4e6b056fe76b7da4885873d356f4240d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170481817251445295, guid: 4e6b056fe76b7da4885873d356f4240d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170481817251445295, guid: 4e6b056fe76b7da4885873d356f4240d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: mainScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e6b056fe76b7da4885873d356f4240d, type: 3}
@@ -3844,9 +3840,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 100
 --- !u!222 &1574219809
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3923,9 +3917,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 15
 --- !u!222 &1618618872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4079,9 +4071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 5
 --- !u!222 &1641688922
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4817,7 +4807,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
+  m_Text: '25
 
 '
 --- !u!222 &1852095967
@@ -5129,9 +5119,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 10
 --- !u!222 &1919467788
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5441,9 +5429,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 300
 --- !u!222 &1980743235
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5676,9 +5662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 5
 --- !u!222 &2089282087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5755,7 +5739,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 10
 --- !u!222 &2099948976
 CanvasRenderer:
   m_ObjectHideFlags: 0
