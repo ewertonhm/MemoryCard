@@ -14,4 +14,8 @@ public class ChangeScene : MonoBehaviour
         GameConfigs.instance.restartConfigs();
         SceneManager.LoadScene("mainScreen");
     }
+    public void quitGame()
+    {
+        Application.Quit();
+    }
 }

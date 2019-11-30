@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameConfigs : MonoBehaviour
 {
     public static GameConfigs instance;
+    [SerializeField] string nome;
+    [SerializeField] int acertos;
     [SerializeField] int gameTime;
     [SerializeField] int numberOfCards;
     [SerializeField] int[] cartasValor;
@@ -14,6 +16,7 @@ public class GameConfigs : MonoBehaviour
     [SerializeField] int tempoRestante = 0;
     [SerializeField] int cartaAtual;
     [SerializeField] bool[] cartaSelecionada;
+    [SerializeField] int pontos;
 
     void Awake()
     {
@@ -31,6 +34,14 @@ public class GameConfigs : MonoBehaviour
         this.cartasSelecionadasNaipe = null;
     }
 
+    public int getPontos()
+    {
+        return this.pontos;
+    }
+    public void setPontos(int pontos)
+    {
+        this.pontos = pontos;
+    }
     public int getGameTime()
     {
         return this.gameTime;
@@ -123,4 +134,22 @@ public class GameConfigs : MonoBehaviour
     {
         this.cartaSelecionada[posicao] = set;
     }
+    public void setAcertos(int acertos)
+    {
+        this.acertos = acertos;
+    }
+    public int getAcertos()
+    {
+        return this.acertos;
+    }
+    public void setNome(string nome)
+    {
+        this.nome = nome;
+    }
+    public string getNome()
+    {
+        return this.nome;
+    }
 }
+
+

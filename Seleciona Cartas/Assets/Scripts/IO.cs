@@ -7,16 +7,40 @@ using UnityEngine;
 public class IO : MonoBehaviour
 {
 
-    public void SaveFile(Ranking r)
+    public void SaveFile(List<string> nome, List<int> acertos, List<int> numeroDeCartas, List<int> tempo)
     {
-        string destination = Application.persistentDataPath + "/save.dat";
+        string destination = Application.persistentDataPath + "./savenome.dat";
         FileStream file;
 
         if (File.Exists(destination)) file = File.OpenWrite(destination);
         else file = File.Create(destination);
 
         BinaryFormatter bf = new BinaryFormatter();
-        bf.Serialize(file, r);
+        bf.Serialize(file, nome);
+        file.Close();
+
+        destination = Application.persistentDataPath + "/saveacertos.dat";
+
+        if (File.Exists(destination)) file = File.OpenWrite(destination);
+        else file = File.Create(destination);
+
+        bf.Serialize(file, acertos);
+        file.Close();
+
+        destination = Application.persistentDataPath + "/savenumerodecartas.dat";
+
+        if (File.Exists(destination)) file = File.OpenWrite(destination);
+        else file = File.Create(destination);
+
+        bf.Serialize(file, numeroDeCartas);
+        file.Close();
+
+        destination = Application.persistentDataPath + "/savetempo.dat";
+
+        if (File.Exists(destination)) file = File.OpenWrite(destination);
+        else file = File.Create(destination);
+
+        bf.Serialize(file, tempo);
         file.Close();
     }
 
